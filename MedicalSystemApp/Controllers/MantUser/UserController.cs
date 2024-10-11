@@ -3,7 +3,6 @@ using MedicalSystem.Application.Interfaces.Services.UserS;
 using MedicalSystem.Application.ViewModel.MantUser;
 using MedicalSystem.Application.ViewModel.User;
 using MedicalSystem.Domain.Entities;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Security.Claims;
@@ -21,29 +20,26 @@ namespace MedicalSystemApp.Controllers.MantUser
             _clinicService = clinicService;
         }
 
-        // GET: /User/Index
+     
         public async Task<IActionResult> Index()
         {
-            // Obtener el ID del usuario logueado desde los claims
+           
             var userIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
             if (string.IsNullOrEmpty(userIdClaim))
             {
-                return Unauthorized(); // Si no hay usuario logueado, retornar 401
+                return Unauthorized(); 
             }
 
             var userId = int.Parse(userIdClaim);
 
-            // Obtener el ClinicID del usuario logueado
             var clinicId = await _userService.GetClinicIdByUserIdAsync(userId);
 
-            // Obtener los usuarios de la misma clínica
             var users = await _userService.GetUsersByClinicAsync(clinicId);
             return View(users);
         }
 
 
-        // GET: /User/Create
         [HttpGet]
         public async Task<IActionResult> Create()
         {
@@ -55,31 +51,30 @@ namespace MedicalSystemApp.Controllers.MantUser
             return View(model);
         }
 
-        // POST: /User/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(RegisterViewModel model)
         {
             if (!ModelState.IsValid)
             {
-                model.Roles = GetRoles(); // Rellenar la lista de roles
+                model.Roles = GetRoles(); 
                 return View(model);
             }
 
             try
             {
-                // Obtener el ID de la clínica del usuario logueado
+              
                 var loggedInUserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
                 var clinicId = await _userService.GetClinicIdByUserIdAsync(loggedInUserId);
 
-                // Registrar el nuevo usuario con la clínica del usuario logueado
-                model.ClinicID = clinicId; // Asigna la clínica del usuario logueado
+              
+                model.ClinicID = clinicId;
                 bool userRegistered = await _userService.RegisterUserAsync(model, loggedInUserId);
 
                 if (!userRegistered)
                 {
                     ModelState.AddModelError(string.Empty, "El nombre de usuario ya existe.");
-                    model.Roles = GetRoles(); // Rellenar la lista de roles
+                    model.Roles = GetRoles();
                     return View(model);
                 }
 
@@ -88,13 +83,13 @@ namespace MedicalSystemApp.Controllers.MantUser
             catch (Exception ex)
             {
                 ModelState.AddModelError(string.Empty, ex.Message);
-                model.Roles = GetRoles(); 
+                model.Roles = GetRoles();
                 return View(model);
             }
         }
 
 
-        // GET: /User/Edit/5
+
         [HttpGet]
         public async Task<IActionResult> Edit(int id)
         {
@@ -112,12 +107,12 @@ namespace MedicalSystemApp.Controllers.MantUser
                 Email = user.Email,
                 Username = user.UserName,
                 Role = user.Role,
-             
+
             };
             return View(model);
         }
 
-        // POST: /User/Edit/5
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(EditUserViewModel model)
@@ -131,10 +126,10 @@ namespace MedicalSystemApp.Controllers.MantUser
 
             try
             {
-                // Si la contraseña está vacía, no la actualices
+
                 if (string.IsNullOrWhiteSpace(model.Password))
                 {
-                    model.Password = null; 
+                    model.Password = null;
                 }
                 var currentUser = await _userService.GetByIdAsync(model.Id);
                 model.Role = currentUser.Role;
@@ -159,7 +154,7 @@ namespace MedicalSystemApp.Controllers.MantUser
                 return View(model);
             }
         }
-        // POST: /User/Delete/5
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int id)
@@ -172,17 +167,18 @@ namespace MedicalSystemApp.Controllers.MantUser
             return RedirectToAction("Index");
         }
 
-        // Método para obtener la lista de clínicas
+
         private async Task<IEnumerable<SelectListItem>> GetClinicsAsync()
         {
             var clinics = await _clinicService.GetAllAsync();
             return clinics.Select(c => new SelectListItem
             {
                 Value = c.Id.ToString(),
-                Text = c.Name}).ToList();
+                Text = c.Name
+            }).ToList();
         }
 
-        // Método para obtener la lista de roles
+
         private List<SelectListItem> GetRoles()
         {
             return new List<SelectListItem>

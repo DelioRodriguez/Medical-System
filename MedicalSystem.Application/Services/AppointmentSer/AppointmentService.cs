@@ -1,12 +1,6 @@
 ﻿using MedicalSystem.Application.Interfaces.Repository.AppointmentS;
-using MedicalSystem.Application.Interfaces.Repository.DoctorRe;
 using MedicalSystem.Application.Interfaces.Repository.Generic;
-using MedicalSystem.Application.Interfaces.Repository.Patients;
-using MedicalSystem.Application.Interfaces.Repository.Test;
 using MedicalSystem.Application.Interfaces.Services.Appoint;
-using MedicalSystem.Application.Interfaces.Services.DoctorSe;
-using MedicalSystem.Application.Interfaces.Services.Patients;
-using MedicalSystem.Application.Services.DoctorSer;
 using MedicalSystem.Application.Services.Generic;
 using MedicalSystem.Application.ViewModel.Ammoin;
 using MedicalSystem.Domain.Entities;

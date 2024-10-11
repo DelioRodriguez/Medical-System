@@ -3,14 +3,8 @@ using MedicalSystem.Application.Interfaces.Repository.Generic;
 using MedicalSystem.Application.Interfaces.Repository.Patients;
 using MedicalSystem.Application.Interfaces.Services.Patients;
 using MedicalSystem.Application.Services.Generic;
-using MedicalSystem.Application.ViewModel.Doctor;
 using MedicalSystem.Application.ViewModel.Patient;
 using MedicalSystem.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MedicalSystem.Application.Services.PatientSe
 {

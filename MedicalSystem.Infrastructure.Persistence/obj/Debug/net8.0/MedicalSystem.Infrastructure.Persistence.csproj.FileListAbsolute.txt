@@ -15,3 +15,4 @@ C:\Programacion 3\MedicalSystem\MedicalSystem.Infrastructure.Persistence\obj\Deb
 C:\Programacion 3\MedicalSystem\MedicalSystem.Infrastructure.Persistence\obj\Debug\net8.0\refint\MedicalSystem.Infrastructure.Persistence.dll
 C:\Programacion 3\MedicalSystem\MedicalSystem.Infrastructure.Persistence\obj\Debug\net8.0\MedicalSystem.Infrastructure.Persistence.pdb
 C:\Programacion 3\MedicalSystem\MedicalSystem.Infrastructure.Persistence\obj\Debug\net8.0\ref\MedicalSystem.Infrastructure.Persistence.dll
+C:\Programacion 3\MedicalSystem\MedicalSystem.Infrastructure.Persistence\obj\Debug\net8.0\MedicalSystem.Infrastructure.Persistence.sourcelink.json

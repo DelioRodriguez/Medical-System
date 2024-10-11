@@ -1,25 +1,133 @@
 ﻿@model MedicalSystem.Application.ViewModel.Extras.ConsultLabTestsViewModel
 
 @{
+    Layout = null;
     ViewData["Title"] = "Consultar Cita";
 }
 
-<div class="container mt-4">
-    <h2>@ViewData["Title"]</h2>
-
-    <form asp-action="CreateLabResults" method="post">
-        <input type="hidden" name="AppointmentId" value="@Model.AppointmentId" />
-        <input type="hidden" name="PatientId" value="@Model.PatientId" />
-
-        <h4>Seleccionar Pruebas de Laboratorio</h4>
-        @foreach (var labTest in Model.LabTests)
-        {
-            <div>
-                <input type="checkbox" name="LabTestIds" value="@labTest.Id" />
-                <label>@labTest.Name</label>
-            </div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f0f8ff;
+            color: #333;
+            font-family: 'Roboto', sans-serif;
         }
 
-        <button type="submit" class="btn btn-primary">Realizar Pruebas</button>
-    </form>
-</div>
+        h2 {
+            color: #007bff;
+            margin-bottom: 20px;
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-top: 50px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+        }
+
+            .btn-primary:hover {
+                background-color: #0056b3;
+            }
+
+        .text-danger {
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+  
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/Asits/Index">Sistema Médico</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Asits/Index">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Patient/Index">Pacientes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Appointment/Index">Citas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/LabResult/Index">Resultados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="confirmLogout()">Cerrar Sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="form-container">
+            <h2>@ViewData["Title"]</h2>
+
+            <form asp-action="CreateLabResults" method="post">
+                <input type="hidden" name="AppointmentId" value="@Model.AppointmentId" />
+                <input type="hidden" name="PatientId" value="@Model.PatientId" />
+
+                <h4>Seleccionar Pruebas de Laboratorio</h4>
+                @foreach (var labTest in Model.LabTests)
+                {
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" name="LabTestIds" value="@labTest.Id" id="labTest-@labTest.Id" />
+                        <label class="form-check-label" for="labTest-@labTest.Id">@labTest.Name</label>
+                    </div>
+                }
+
+                <button type="submit" class="btn btn-primary">Realizar Pruebas</button>
+                <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+            </form>
+        </div>
+    </div>
+
+   
+    <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="logoutModalLabel">Confirmar Cierre de Sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ¿Estás seguro de que deseas cerrar sesión?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-danger" onclick="redirectToLogin()">Cerrar Sesión</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function confirmLogout() {
+            var logoutModal = new bootstrap.Modal(document.getElementById('logoutModal'));
+            logoutModal.show();
+        }
+
+        function redirectToLogin() {
+            window.location.href = '/Auth/Login'; 
+    </script>
+</body>
+</html>

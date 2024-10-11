@@ -25,7 +25,7 @@
 
         .logo-container {
             position: absolute;
-            left: 100px; /* Ajustar la posición horizontal */
+            left: 100px;
             top: 50%;
             transform: translateY(-50%);
             z-index: 2;
@@ -79,8 +79,8 @@
 
         .disabled-select {
             background: rgba(255, 255, 255, 0.2);
-            color: #aaa; /* Cambia el color del texto para indicar que está deshabilitado */
-            cursor: not-allowed; /* Cambia el cursor al pasar sobre el select */
+            color: #aaa;
+            cursor: not-allowed;
         }
 
         .btn-primary:hover {
@@ -91,7 +91,7 @@
 <body>
     <div class="logo-container">
         <h1 class="header-title">MEDICAL SYSTEM</h1>
-        <p class="slogan">Atención Médica a Tu Alcance</p> <!-- Eslogan agregado -->
+        <p class="slogan">Atención Médica a Tu Alcance</p>
     </div>
     <div class="container">
         <div class="row justify-content-end">
@@ -142,11 +142,9 @@
                                 </div>
                             </div>
 
-                           
                             <input type="hidden" asp-for="ClinicID" />
 
                             <div class="row mb-3">
-                                
                                 <div class="col-md-6">
                                     <label asp-for="ClinicName" class="form-label">Nombre de la Nueva Clínica</label>
                                     <input asp-for="ClinicName" class="form-control" placeholder="Ingrese el nombre de la clínica" />

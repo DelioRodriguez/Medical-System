@@ -1,4 +1,5 @@
 ﻿using MedicalSystem.Application.Interfaces.Services.Generic;
+using MedicalSystem.Application.ViewModel.Extras;
 using MedicalSystem.Application.ViewModel.Lab;
 using MedicalSystem.Domain.Entities;
 
@@ -16,5 +17,7 @@ namespace MedicalSystem.Application.Interfaces.Services.Lab
         Task<List<LabResult>> GetResultsByAppointmentIdAsync(int appointmentId);
         Task ReportResultAsync(ReportResultViewModel reportViewModel);
         Task CreateLabResultAsync(CreateResultViewModel model);
+        
+        Task<List<LabResult>> GetAllConfirmedResultsByAppointmentIdAsync(int officeId, int appointmentId);
     }
 }

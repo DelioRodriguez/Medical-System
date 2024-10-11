@@ -7,6 +7,7 @@ using MedicalSystem.Application.ViewModel.Lab;
 using MedicalSystem.Domain.Entities;
 using MedicalSystem.Domain.Enums;
 
+
 namespace MedicalSystem.Application.Services.Lab
 {
     public class LabResulService : Service<LabResult>, ILabResultService
@@ -24,6 +25,10 @@ namespace MedicalSystem.Application.Services.Lab
             await _resultRepository.addAsync(result);
         }
 
+
+
+
+
         public async Task<List<ResultLaboratoryListViewModel>> GetAllByOfficeIdAsync(int officeId)
         {
             var results = await _resultRepository.GetAllByOfficeIdAsync(officeId);
@@ -35,6 +40,16 @@ namespace MedicalSystem.Application.Services.Lab
                 TestName = r.LabTest.Name,
                 Status = r.Status
             }).ToList();
+        }
+
+
+        public async Task<List<LabResult>> GetAllConfirmedResultsByAppointmentIdAsync(int officeId, int appointmentId)
+        {
+            var results = await _resultRepository.GetAllByOfficeIdAsync(officeId);
+
+            return results
+                .Where(r => r.AppointmentId == appointmentId && r.Status == Status.COMPLETADA) 
+                .ToList();
         }
 
         public async Task<List<ResultLaboratoryListViewModel>> GetAllPendingResultsAsync(int officeId)
@@ -50,6 +65,11 @@ namespace MedicalSystem.Application.Services.Lab
                     TestName = r.LabTest.Name,
                     Status = r.Status
                 }).ToList();
+        }
+
+        public async Task<IEnumerable<LabResult>> GetCompletedLabResultsByAppointmentIdAsync(int appointmentId)
+        {
+            return await _resultRepository.GetCompletedLabResultsByAppointmentIdAsync(appointmentId);
         }
 
         public async Task CreateLabResultAsync(CreateResultViewModel model)

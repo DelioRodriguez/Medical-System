@@ -140,7 +140,7 @@ namespace MedicalSystem.Application.Services.UserSer
                 return false;
             }
 
-            // Obtener la clínica del usuario logueado
+       
             var clinicId = await GetClinicIdByUserIdAsync(loggedInUserId);
 
             var newUser = new User

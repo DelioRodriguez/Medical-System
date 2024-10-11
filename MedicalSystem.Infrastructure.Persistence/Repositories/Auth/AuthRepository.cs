@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using MedicalSystem.Infrastructure.Persistence.Context; // Asegúrate de usar el namespace correcto
+using MedicalSystem.Infrastructure.Persistence.Context; 
 using MedicalSystem.Infrastructure.Persistence.Repositories.Generic;
 using MedicalSystem.Application.Interfaces.Repository.Auth;
 using MedicalSystem.Domain.Entities;

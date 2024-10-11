@@ -53,12 +53,28 @@
       "PackagePath": "staticwebassets\\images\\doctors\\99d637e9-8da1-4d98-93f8-8db4245a56b8.png"
     },
     {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\images\\doctors\\ab8798fb-fd29-4d26-93c5-b40a31a3f609.png",
+      "PackagePath": "staticwebassets\\images\\doctors\\ab8798fb-fd29-4d26-93c5-b40a31a3f609.png"
+    },
+    {
       "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\images\\doctors\\c3645671-e639-48ce-83e2-e56fb074079d.png",
       "PackagePath": "staticwebassets\\images\\doctors\\c3645671-e639-48ce-83e2-e56fb074079d.png"
     },
     {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\images\\patients\\48015f59-eb3f-4241-83e3-f066248ea292.png",
+      "PackagePath": "staticwebassets\\images\\patients\\48015f59-eb3f-4241-83e3-f066248ea292.png"
+    },
+    {
       "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\images\\patients\\9128bfb1-9844-429e-bb20-85716c40b181.png",
       "PackagePath": "staticwebassets\\images\\patients\\9128bfb1-9844-429e-bb20-85716c40b181.png"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\images\\patients\\a49e2834-f477-469a-83b6-79c7b25b981b.png",
+      "PackagePath": "staticwebassets\\images\\patients\\a49e2834-f477-469a-83b6-79c7b25b981b.png"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\images\\patients\\ae74f3b2-9b4f-4585-b816-31da34820447.png",
+      "PackagePath": "staticwebassets\\images\\patients\\ae74f3b2-9b4f-4585-b816-31da34820447.png"
     },
     {
       "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\images\\patients\\b74161be-e740-4047-a1e6-6b2116bbfba8.png",

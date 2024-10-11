@@ -12,20 +12,20 @@ namespace MedicalSystem.Application.ViewModel.Patient
         [Required(ErrorMessage = "El nombre es obligatorio")]
         [Display(Name = "Nombre")]
         [StringLength(50, ErrorMessage = "El nombre no puede tener más de 50 caracteres.")]
-        public string FirstName { get; set; }
+        public string? FirstName { get; set; }
 
         [Required(ErrorMessage = "El apellido es obligatorio")]
         [Display(Name = "Apellido")]
         [StringLength(50, ErrorMessage = "El apellido no puede tener más de 50 caracteres.")]
-        public string LastName { get; set; }
+        public string? LastName { get; set; }
 
         [EmailAddress(ErrorMessage = "El correo electrónico no es válido.")]
         [Display(Name = "Correo Electrónico")]
-        public string Email { get; set; }
+        public string? Email { get; set; }
 
         [Phone(ErrorMessage = "El número de teléfono no es válido.")]
         [Display(Name = "Teléfono")]
-        public string Phone { get; set; }
+        public string? Phone { get; set; }
 
         [Display(Name = "Número de Identificación")]
         [StringLength(20, ErrorMessage = "El número de identificación no puede tener más de 20 caracteres.")]
@@ -34,7 +34,7 @@ namespace MedicalSystem.Application.ViewModel.Patient
         [Display(Name = "Foto")]
         public string? Photo { get; set; }
 
-        [Required(ErrorMessage = "La fecha de nacimiento es obligatoria")]
+       
         [Display(Name = "Fecha de Nacimiento")]
         [DataType(DataType.Date)]
         public DateTime DateOfBirth { get; set; }

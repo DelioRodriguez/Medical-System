@@ -30,6 +30,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Programacion 3/MedicalSystem/MedicalSystemApp/Views/Appointment/ViewCompletedResults.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRcVmlld0NvbXBsZXRlZFJlc3VsdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Programacion 3/MedicalSystem/MedicalSystemApp/Views/Appointment/ViewResults.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRcVmlld1Jlc3VsdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Programacion 3/MedicalSystem/MedicalSystemApp/Views/Asits/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNpdHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

@@ -15,3 +15,4 @@ C:\Programacion 3\MedicalSystem\MedicalSystem.Application\obj\Debug\net8.0\refin
 C:\Programacion 3\MedicalSystem\MedicalSystem.Application\obj\Debug\net8.0\MedicalSystem.Application.pdb
 C:\Programacion 3\MedicalSystem\MedicalSystem.Application\obj\Debug\net8.0\MedicalSystem.Application.genruntimeconfig.cache
 C:\Programacion 3\MedicalSystem\MedicalSystem.Application\obj\Debug\net8.0\ref\MedicalSystem.Application.dll
+C:\Programacion 3\MedicalSystem\MedicalSystem.Application\obj\Debug\net8.0\MedicalSystem.Application.sourcelink.json

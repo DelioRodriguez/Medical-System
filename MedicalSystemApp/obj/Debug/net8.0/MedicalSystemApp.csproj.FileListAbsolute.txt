@@ -157,3 +157,4 @@ C:\Programacion 3\MedicalSystem\MedicalSystemApp\bin\Debug\net8.0\zh-Hans\Micros
 C:\Programacion 3\MedicalSystem\MedicalSystemApp\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Programacion 3\MedicalSystem\MedicalSystemApp\obj\Debug\net8.0\MedicalSystemApp.MvcApplicationPartsAssemblyInfo.cs
 C:\Programacion 3\MedicalSystem\MedicalSystemApp\bin\Debug\net8.0\BCrypt.Net-Next.dll
+C:\Programacion 3\MedicalSystem\MedicalSystemApp\obj\Debug\net8.0\MedicalSystemApp.sourcelink.json

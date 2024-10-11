@@ -1,20 +1,72 @@
 ﻿@model MedicalSystem.Application.ViewModel.LabTestS.LabTestViewModel
 
 @{
+    Layout = null;
     ViewData["Title"] = "Crear Test de Laboratorio";
 }
 
-<h2>Crear Test de Laboratorio</h2>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #e9ecef;
+            font-family: 'Roboto', sans-serif;
+            color: #343a40; 
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/Home/Index">Sistema Médico</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Home/Index">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/User/Index">Gestión de Usuarios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Doctor/Index">Doctores</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/LabTest/Index">Test Laboratorio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Auth/LogoutConfirmation">Cerrar Sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-<form asp-action="Create" method="post">
-    <div class="form-group">
-        <label asp-for="Name" class="control-label"></label>
-        <input asp-for="Name" class="form-control" />
-        <span asp-validation-for="Name" class="text-danger"></span>
+    <div class="container mt-4">
+        <h2>@ViewData["Title"]</h2>
+
+        <form asp-action="Create" method="post">
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <input type="hidden" asp-for="ClinicId" />
+
+            <button type="submit" class="btn btn-primary">Crear</button>
+            <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+        </form>
     </div>
 
-    <input type="hidden" asp-for="ClinicId" />
-
-    <button type="submit" class="btn btn-primary">Crear</button>
-    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
-</form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

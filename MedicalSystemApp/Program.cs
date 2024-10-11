@@ -34,6 +34,8 @@ using MedicalSystem.Application.Interfaces.Services.Lab;
 using MedicalSystem.Application.Services.Lab;
 using MedicalSystem.Infrastructure.Persistence.Repositories.Lab;
 using MedicalSystem.Application.Services.AppointmentSer;
+using MedicalSystem.Application;
+using MedicalSystem.Infrastructure.Persistence;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -45,32 +47,8 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Registrar servicios ANTES de builder.Build()
-builder.Services.AddScoped<IRepository<User>, AuthRepository>();
-builder.Services.AddScoped<IUserRepository, UserRepository>();
-builder.Services.AddScoped<IAuthRepository, AuthRepository>();
-builder.Services.AddScoped<IService<Clinic>, Service<Clinic>>();
-builder.Services.AddScoped<IRepository<Clinic>, Repository<Clinic>>();
-builder.Services.AddScoped<IService<User>, Service<User>>();
-builder.Services.AddScoped<IAuthService, AuthService>();
-builder.Services.AddScoped<IUserService, UserService>();
-builder.Services.AddScoped<IPatientService, PatientService>();
-builder.Services.AddScoped<IUserService, UserService>();
-builder.Services.AddScoped<IRepository<Patient>, Repository<Patient>>();
-builder.Services.AddScoped<IPatientRepository, PatientRepository>();
-builder.Services.AddScoped<IDoctorRepository, DoctorRepository>();
-builder.Services.AddScoped<IRepository<Doctor>, DoctorRepository>();
-builder.Services.AddScoped<IPatientService, PatientService>();
-builder.Services.AddScoped<IAppointmentRepository, AppointmentRepository>();
-builder.Services.AddScoped<IAppointmentService, AppointmentService>();
-builder.Services.AddScoped<IRepository<Appointment>, AppointmentRepository>();
-builder.Services.AddScoped<IDoctorService, DoctorServices>();
-builder.Services.AddScoped<ILabTestService, LabTestService>(); 
-builder.Services.AddScoped<ILabTestRepository, LabTestRepository>();
-builder.Services.AddScoped<IRepository<LabTest>, LabTestRepository>();
-builder.Services.AddScoped<ILabResultService, LabResulService>();
-builder.Services.AddScoped<ILabResultRepository, LabResultRepository>();
-builder.Services.AddScoped<IRepository<LabResult>, LabResultRepository>();
+ServiceRegistration.RegisterServices(builder.Services);
+RepositoryRegistration.RegisterRepositories(builder.Services);
 
 
 

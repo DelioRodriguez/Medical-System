@@ -5,9 +5,7 @@ using MedicalSystem.Application.Interfaces.Services.DoctorSe;
 using MedicalSystem.Application.Interfaces.Services.Patients;
 using MedicalSystem.Application.ViewModel.Ammoin;
 using Microsoft.AspNetCore.Mvc.Rendering;
-
 using MedicalSystem.Application.Interfaces.Services.UserS;
-
 using MedicalSystem.Application.Interfaces.Services.Test;
 using MedicalSystem.Application.ViewModel.Lab;
 using MedicalSystem.Domain.Enums;
@@ -22,7 +20,7 @@ namespace MedicalSystemApp.Controllers
         private readonly IDoctorService _doctorService;
         private readonly IPatientService _patientService;
         private readonly IUserService _userService;
-        private readonly ILabTestService _labTestService; 
+        private readonly ILabTestService _labTestService;
         private readonly ILabResultService _labResultService;
 
         public AppointmentController(
@@ -37,7 +35,7 @@ namespace MedicalSystemApp.Controllers
             _doctorService = doctorService;
             _patientService = patientService;
             _userService = userService;
-            _labTestService = labTestService; 
+            _labTestService = labTestService;
             _labResultService = labResultService;
         }
 
@@ -84,17 +82,17 @@ namespace MedicalSystemApp.Controllers
 
         private async Task<IEnumerable<SelectListItem>> GetDoctorsAsync()
         {
-            var doctors = await _doctorService.GetAllAsync();
+            var doctors = await _doctorService.GetDoctorByClinicAsync(await GetClinicIdAsync());
             return doctors.Select(d => new SelectListItem
             {
                 Value = d.Id.ToString(),
-                Text = $"{d.FirstName} {d.LastName}"
+                Text = $"{d.Firstname} {d.Lastname}"
             }).ToList();
         }
 
         private async Task<IEnumerable<SelectListItem>> GetPatientsAsync()
         {
-            var patients = await _patientService.GetAllAsync();
+            var patients = await _patientService.GetPatientByClinicAsync(await GetClinicIdAsync());
             return patients.Select(p => new SelectListItem
             {
                 Value = p.Id.ToString(),
@@ -134,22 +132,131 @@ namespace MedicalSystemApp.Controllers
                 {
                     PatientId = patientId,
                     LabTestId = labTestId,
-                    Result = null, 
-                    Status = Status.PENDIENTEDERESULTADOS, 
-                    ClinicId = await GetClinicIdAsync(), 
+                    Result = null,
+                    Status = Status.PENDIENTEDERESULTADOS,
+                    ClinicId = await GetClinicIdAsync(),
                     AppointmentId = appointmentId
                 };
 
                 await _labResultService.CreateLabResultAsync(createResultViewModel);
             }
 
-           
             await _appointmentService.UpdateAppointmentStatusToPendingResultsAsync(appointmentId);
 
             return RedirectToAction(nameof(Index));
         }
 
+        [HttpGet]
+        public async Task<IActionResult> ViewResults(int id)
+        {
+            try
+            {
+                var appointment = await _appointmentService.GetByIdAsync(id);
 
-      
+                if (appointment == null)
+                {
+                    return NotFound();
+                }
+
+                var clinicId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                if (clinicId is null) throw new InvalidOperationException("No se encontró el ClinicId en los Claims");
+
+                int ClinicID = int.Parse(clinicId);
+                var cliniID = await _userService.GetClinicIdByUserIdAsync(ClinicID);
+
+                var labResults = await _labResultService.GetAllConfirmedResultsByAppointmentIdAsync(cliniID, id);
+
+                var viewModel = new LabResultViewModel
+                {
+                    AppointmentId = appointment.Id,
+                    PatientName = appointment.Patient.FirstName,
+                    LabResults = labResults.Select(r => new LabResultDetailViewModel
+                    {
+                        PatientFullName = r.Patient.FirstName,
+                        TestName = r.LabTest.Name,
+                        Result = r.Result
+                    }).ToList()
+                };
+
+                return View(viewModel);
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError(string.Empty, ex.Message);
+                return View(new LabResultViewModel());
+            }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> CompleteAppointment(int appointmentId)
+        {
+            var appointment = await _appointmentService.GetByIdAsync(appointmentId);
+
+            if (appointment == null)
+            {
+                return NotFound();
+            }
+
+            appointment.Status = Status.COMPLETADA;
+            await _appointmentService.UpdateAsync(appointment);
+
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> ViewCompletedResults(int id)
+        {
+            try
+            {
+                var appointment = await _appointmentService.GetByIdAsync(id);
+
+                if (appointment == null)
+                {
+                    return NotFound();
+                }
+
+                var clinicId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                if (clinicId is null) throw new InvalidOperationException("No se encontró el ClinicId en los Claims");
+
+                int ClinicID = int.Parse(clinicId);
+                var cliniID = await _userService.GetClinicIdByUserIdAsync(ClinicID);
+
+                var labResults = await _labResultService.GetAllConfirmedResultsByAppointmentIdAsync(cliniID, id);
+
+                var viewModel = new LabResultViewModel
+                {
+                    AppointmentId = appointment.Id,
+                    PatientName = $"{appointment.Patient.FirstName} {appointment.Patient.LastName}",
+                    LabResults = labResults.Select(r => new LabResultDetailViewModel
+                    {
+                        PatientFullName = $"{r.Patient.FirstName} {r.Patient.LastName}",
+                        TestName = r.LabTest.Name,
+                        Result = r.Result
+                    }).ToList()
+                };
+
+                return View("ViewCompletedResults", viewModel);
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError(string.Empty, ex.Message);
+                return View(new LabResultViewModel());
+            }
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var appointment = await _appointmentService.GetByIdAsync(id);
+            if (appointment == null)
+            {
+                return NotFound();
+            }
+
+            await _appointmentService.DeleteAppointmentAsync(id);
+            return RedirectToAction(nameof(Index)); 
+        }
+
+
     }
 }

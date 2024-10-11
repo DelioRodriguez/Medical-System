@@ -54,10 +54,10 @@ namespace MedicalSystem.Application.Services.DoctorSer
 
         public async Task<IEnumerable<DoctorViewModel>> GetAllDoctorsAsync()
         {
-            // Obtén la lista de doctores del repositorio
+          
             var doctors = await _doctorRepository.GetAllAsync();
 
-            // Mapea la lista de doctores a DoctorViewModel
+           
             var doctorViewModels = doctors.Select(d => new DoctorViewModel
             {
                 Id = d.Id,

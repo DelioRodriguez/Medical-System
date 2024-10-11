@@ -114,7 +114,8 @@ namespace MedicalSystemApp.Controllers.Patients
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit (PatientViewModel model,IFormFile? photoFile)
+      
+        public async Task<IActionResult> Edit(PatientViewModel model, IFormFile? photoFile)
         {
             if (!ModelState.IsValid)
             {
@@ -124,30 +125,31 @@ namespace MedicalSystemApp.Controllers.Patients
 
             try
             {
-                if (photoFile == null)
+                if (photoFile != null)
                 {
-                    var existingPatient = await _patientService.GetPatientAsync(model.Id);
-                    model.Photo = existingPatient.Photo;
-                }
-                else
-                {
-                    var filePath = Path.Combine("wwwwroot/images/patients", photoFile.FileName);
+                    var fileName = Guid.NewGuid().ToString() + Path.GetExtension(photoFile.FileName);
+                    var filePath = Path.Combine("wwwroot/images/patients", fileName);
 
-                    using(var stream = new FileStream(filePath,FileMode.Create))
+                    using (var stream = new FileStream(filePath, FileMode.Create))
                     {
                         await photoFile.CopyToAsync(stream);
                     }
-                    model.Photo = photoFile.FileName;
+                    model.Photo = fileName;
+                }
+                else
+                {
+                    var existingPatient = await _patientService.GetPatientAsync(model.Id);
+                    model.Photo = existingPatient.Photo; 
                 }
 
                 bool patientUpdated = await _patientService.UpdatePatientAsync(model);
-
                 if (!patientUpdated)
                 {
                     ModelState.AddModelError(string.Empty, "No se pudo actualizar el paciente");
                     model.Clinics = await GetClinicsAsync();
                     return View(model);
                 }
+
                 return RedirectToAction("Index", new { clinicId = model.ClinicId });
             }
             catch (Exception ex)

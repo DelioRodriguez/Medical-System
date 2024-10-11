@@ -20,9 +20,16 @@ namespace MedicalSystem.Infrastructure.Persistence.Repositories.Lab
         public async Task<List<LabResult>> GetAllByOfficeIdAsync(int officeId)
         {
             return await _context.labResults
-                .Include( r=> r.Patient)
-                .Include( r => r.LabTest)
-                .Where (r => r.ClinicId == officeId)
+                .Include(r => r.Patient)
+                .Include(r => r.LabTest)
+                .Where(r => r.ClinicId == officeId)
+                .ToListAsync();
+        }
+
+        public async Task<IEnumerable<LabResult>> GetCompletedLabResultsByAppointmentIdAsync(int appointmentId)
+        {
+            return await _context.labResults
+                .Where(result => result.AppointmentId == appointmentId && result.Status == Status.COMPLETADA)
                 .ToListAsync();
         }
 
@@ -34,6 +41,14 @@ namespace MedicalSystem.Infrastructure.Persistence.Repositories.Lab
                 .Where(r => r.Patient.IDCard == patientID && r.Status == Status.PENDIENTEDERESULTADOS && r.ClinicId == clinicID)
                 .ToListAsync();
         }
+        public async Task<List<LabResult>> GetByAppointmentIdAsync(int appointmentId)
+        {
+            return await _context.labResults
+                .Include(lr => lr.LabTest) 
+                .Where(lr => lr.AppointmentId == appointmentId)
+                .ToListAsync();
+        }
+
 
         public async Task<LabResult> GetResultByIdAsync(int resultId)
         {

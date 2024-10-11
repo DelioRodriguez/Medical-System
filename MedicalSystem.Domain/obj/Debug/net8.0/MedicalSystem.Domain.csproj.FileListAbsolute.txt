@@ -10,3 +10,4 @@ C:\Programacion 3\MedicalSystem\MedicalSystem.Domain\obj\Debug\net8.0\refint\Med
 C:\Programacion 3\MedicalSystem\MedicalSystem.Domain\obj\Debug\net8.0\MedicalSystem.Domain.pdb
 C:\Programacion 3\MedicalSystem\MedicalSystem.Domain\obj\Debug\net8.0\ref\MedicalSystem.Domain.dll
 C:\Programacion 3\MedicalSystem\MedicalSystem.Domain\obj\Debug\net8.0\MedicalSystem.Domain.csproj.AssemblyReference.cache
+C:\Programacion 3\MedicalSystem\MedicalSystem.Domain\obj\Debug\net8.0\MedicalSystem.Domain.sourcelink.json
