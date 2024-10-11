@@ -1,0 +1,46 @@
+﻿@model IEnumerable<MedicalSystem.Application.ViewModel.Lab.ResultLaboratoryListViewModel>
+
+
+@{
+    Layout = null;
+    ViewData["Title"] = "Resultados de Laboratorio Pendientes";
+
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form asp-action="Search" method="get">
+    <div class="form-group">
+        <label for="patientCardId">Buscar por Cédula del Paciente:</label>
+        <input type="text" class="form-control" id="patientCardId" name="patientCardId" />
+    </div>
+    <button type="submit" class="btn btn-primary">Buscar</button>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre del Paciente</th>
+            <th>Cédula del Paciente</th>
+            <th>Nombre del Test</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var result in Model)
+        {
+            <tr>
+                <td>@result.Id</td>
+                <td>@result.PatientFullName</td>
+                <td>@result.PatientIdCard</td>
+                <td>@result.TestName</td>
+                <td>@result.Status.ToString()</td>
+                <td>
+                    <a asp-action="Report" asp-route-id="@result.Id" class="btn btn-warning">Reportar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,12 @@
+C:\Programacion 3\MedicalSystem\MedicalSystem.Domain\bin\Debug\net8.0\MedicalSystem.Domain.deps.json
+C:\Programacion 3\MedicalSystem\MedicalSystem.Domain\bin\Debug\net8.0\MedicalSystem.Domain.dll
+C:\Programacion 3\MedicalSystem\MedicalSystem.Domain\bin\Debug\net8.0\MedicalSystem.Domain.pdb
+C:\Programacion 3\MedicalSystem\MedicalSystem.Domain\obj\Debug\net8.0\MedicalSystem.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Programacion 3\MedicalSystem\MedicalSystem.Domain\obj\Debug\net8.0\MedicalSystem.Domain.AssemblyInfoInputs.cache
+C:\Programacion 3\MedicalSystem\MedicalSystem.Domain\obj\Debug\net8.0\MedicalSystem.Domain.AssemblyInfo.cs
+C:\Programacion 3\MedicalSystem\MedicalSystem.Domain\obj\Debug\net8.0\MedicalSystem.Domain.csproj.CoreCompileInputs.cache
+C:\Programacion 3\MedicalSystem\MedicalSystem.Domain\obj\Debug\net8.0\MedicalSystem.Domain.dll
+C:\Programacion 3\MedicalSystem\MedicalSystem.Domain\obj\Debug\net8.0\refint\MedicalSystem.Domain.dll
+C:\Programacion 3\MedicalSystem\MedicalSystem.Domain\obj\Debug\net8.0\MedicalSystem.Domain.pdb
+C:\Programacion 3\MedicalSystem\MedicalSystem.Domain\obj\Debug\net8.0\ref\MedicalSystem.Domain.dll
+C:\Programacion 3\MedicalSystem\MedicalSystem.Domain\obj\Debug\net8.0\MedicalSystem.Domain.csproj.AssemblyReference.cache

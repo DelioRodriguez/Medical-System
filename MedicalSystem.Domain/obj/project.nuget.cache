@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "y5JJPDqIBgg=",
+  "success": true,
+  "projectFilePath": "C:\\Programacion 3\\MedicalSystem\\MedicalSystem.Domain\\MedicalSystem.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Delio Rodriguez\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

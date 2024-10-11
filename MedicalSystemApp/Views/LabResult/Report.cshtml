@@ -1,0 +1,20 @@
+﻿@model MedicalSystem.Application.ViewModel.Lab.ReportResultViewModel
+
+@{
+    ViewData["Title"] = "Reportar Resultado";
+    Layout = null;
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form asp-action="Report" method="post">
+    <input type="hidden" asp-for="ResultLaboratoryId" />
+
+    <div class="form-group">
+        <label for="result">Resultado:</label>
+        <textarea class="form-control" id="result" name="Result" required></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-success">Enviar Resultado</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>

@@ -1,0 +1,25 @@
+﻿@model MedicalSystem.Application.ViewModel.Extras.ConsultLabTestsViewModel
+
+@{
+    ViewData["Title"] = "Consultar Cita";
+}
+
+<div class="container mt-4">
+    <h2>@ViewData["Title"]</h2>
+
+    <form asp-action="CreateLabResults" method="post">
+        <input type="hidden" name="AppointmentId" value="@Model.AppointmentId" />
+        <input type="hidden" name="PatientId" value="@Model.PatientId" />
+
+        <h4>Seleccionar Pruebas de Laboratorio</h4>
+        @foreach (var labTest in Model.LabTests)
+        {
+            <div>
+                <input type="checkbox" name="LabTestIds" value="@labTest.Id" />
+                <label>@labTest.Name</label>
+            </div>
+        }
+
+        <button type="submit" class="btn btn-primary">Realizar Pruebas</button>
+    </form>
+</div>

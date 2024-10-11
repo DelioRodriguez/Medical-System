@@ -1,0 +1,47 @@
+﻿@model MedicalSystem.Application.ViewModel.Patient.PatientViewModel
+
+@{
+    ViewBag.Title = "Editar Paciente";
+}
+
+<h2>Editar Paciente</h2>
+
+<form asp-action="Edit" enctype="multipart/form-data" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label asp-for="FirstName"></label>
+        <input asp-for="FirstName" class="form-control" />
+        <span asp-validation-for="FirstName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="LastName"></label>
+        <input asp-for="LastName" class="form-control" />
+        <span asp-validation-for="LastName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Phone"></label>
+        <input asp-for="Phone" class="form-control" />
+        <span asp-validation-for="Phone" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="IDCard"></label>
+        <input asp-for="IDCard" class="form-control" />
+        <span asp-validation-for="IDCard" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Photo"></label>
+        <input type="file" asp-for="Photo" class="form-control" />
+        <span asp-validation-for="Photo" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ClinicId"></label>
+        <select asp-for="ClinicId" asp-items="Model.Clinics" class="form-control"></select>
+        <span asp-validation-for="ClinicId" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Actualizar</button>
+</form>

@@ -1,0 +1,325 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MedicalSystemApp.bundle.scp.css",
+      "PackagePath": "staticwebassets\\MedicalSystemApp.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\css\\logo.webp",
+      "PackagePath": "staticwebassets\\css\\logo.webp"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\images\\doctors\\1c695bba-bdbd-43f6-9b6d-ae129aa59ac8.png",
+      "PackagePath": "staticwebassets\\images\\doctors\\1c695bba-bdbd-43f6-9b6d-ae129aa59ac8.png"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\images\\doctors\\25537481-5580-45c1-833c-8ddd683c6f26.png",
+      "PackagePath": "staticwebassets\\images\\doctors\\25537481-5580-45c1-833c-8ddd683c6f26.png"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\images\\doctors\\2a5ced3d-3d94-4b33-bd84-346c5be911b7.png",
+      "PackagePath": "staticwebassets\\images\\doctors\\2a5ced3d-3d94-4b33-bd84-346c5be911b7.png"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\images\\doctors\\323eb918-befc-4229-ae34-94634d2135e0.png",
+      "PackagePath": "staticwebassets\\images\\doctors\\323eb918-befc-4229-ae34-94634d2135e0.png"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\images\\doctors\\519dd832-0fa9-4f5e-8b6a-1fd02b7e1f44.png",
+      "PackagePath": "staticwebassets\\images\\doctors\\519dd832-0fa9-4f5e-8b6a-1fd02b7e1f44.png"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\images\\doctors\\55c59f97-bf8e-4dc6-83a9-81b8de0494b1.png",
+      "PackagePath": "staticwebassets\\images\\doctors\\55c59f97-bf8e-4dc6-83a9-81b8de0494b1.png"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\images\\doctors\\69706f69-13ad-471a-8ac6-b45667fdca45.png",
+      "PackagePath": "staticwebassets\\images\\doctors\\69706f69-13ad-471a-8ac6-b45667fdca45.png"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\images\\doctors\\6cf9f462-c8fc-4215-bb29-2ad5070c6511.png",
+      "PackagePath": "staticwebassets\\images\\doctors\\6cf9f462-c8fc-4215-bb29-2ad5070c6511.png"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\images\\doctors\\99d637e9-8da1-4d98-93f8-8db4245a56b8.png",
+      "PackagePath": "staticwebassets\\images\\doctors\\99d637e9-8da1-4d98-93f8-8db4245a56b8.png"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\images\\doctors\\c3645671-e639-48ce-83e2-e56fb074079d.png",
+      "PackagePath": "staticwebassets\\images\\doctors\\c3645671-e639-48ce-83e2-e56fb074079d.png"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\images\\patients\\9128bfb1-9844-429e-bb20-85716c40b181.png",
+      "PackagePath": "staticwebassets\\images\\patients\\9128bfb1-9844-429e-bb20-85716c40b181.png"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\images\\patients\\b74161be-e740-4047-a1e6-6b2116bbfba8.png",
+      "PackagePath": "staticwebassets\\images\\patients\\b74161be-e740-4047-a1e6-6b2116bbfba8.png"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\images\\patients\\cb879202-06a4-4bf2-a453-ce02fa7d7eb4.png",
+      "PackagePath": "staticwebassets\\images\\patients\\cb879202-06a4-4bf2-a453-ce02fa7d7eb4.png"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\images\\patients\\ce9f8468-f123-4557-99df-1db24a411724.png",
+      "PackagePath": "staticwebassets\\images\\patients\\ce9f8468-f123-4557-99df-1db24a411724.png"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Programacion 3\\MedicalSystem\\MedicalSystemApp\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.MedicalSystemApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.MedicalSystemApp.props",
+      "PackagePath": "build\\MedicalSystemApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.MedicalSystemApp.props",
+      "PackagePath": "buildMultiTargeting\\MedicalSystemApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.MedicalSystemApp.props",
+      "PackagePath": "buildTransitive\\MedicalSystemApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,62 @@
+﻿@model IEnumerable<MedicalSystem.Application.ViewModel.Ammoin.AppointmentViewModel>
+
+@{
+    ViewData["Title"] = "Listado de Citas";
+}
+
+<div class="container mt-4">
+    <h2>@ViewData["Title"]</h2>
+    <a asp-action="Create" class="btn btn-primary mb-3">Crear Nueva Cita</a>
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>Nombre del Paciente</th>
+                <th>Nombre del Médico</th>
+                <th>Fecha de la Cita</th>
+                <th>Hora de la Cita</th>
+                <th>Causa de la Cita</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                foreach (var appointment in Model)
+                {
+                    <tr>
+                        <td>@appointment.PatientName</td>
+                        <td>@appointment.DoctorName</td>
+                        <td>@appointment.Date.ToShortDateString()</td>
+                        <td>@appointment.Time</td>
+                        <td>@appointment.Cause</td>
+                        <td>@appointment.Status.ToString()</td>
+                        <td>
+                            @switch (appointment.Status)
+                            {
+                                case MedicalSystem.Domain.Enums.Status.PENDIENTEDECONDSULTA:
+                                    <a asp-action="Consult" asp-route-id="@appointment.Id" class="btn btn-warning btn-sm">Consultar</a>
+                                    break;
+                                case MedicalSystem.Domain.Enums.Status.PENDIENTEDERESULTADOS:
+                                    <a asp-action="ViewResults" asp-route-id="@appointment.Id" class="btn btn-info btn-sm">Consultar Resultados</a>
+                                    break;
+                                case MedicalSystem.Domain.Enums.Status.COMPLETADA:
+                                    <a asp-action="ViewCompletedResults" asp-route-id="@appointment.Id" class="btn btn-success btn-sm">Ver Resultados</a>
+                                    break;
+                            }
+                            <form asp-action="Delete" asp-route-id="@appointment.Id" method="post" style="display:inline-block;" onsubmit="return confirm('¿Está seguro de que desea eliminar esta cita?');">
+                                <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="7" class="text-center">No hay citas disponibles.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

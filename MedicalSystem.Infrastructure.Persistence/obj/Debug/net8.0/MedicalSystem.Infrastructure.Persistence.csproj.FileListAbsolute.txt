@@ -1,0 +1,17 @@
+C:\Programacion 3\MedicalSystem\MedicalSystem.Infrastructure.Persistence\bin\Debug\net8.0\MedicalSystem.Infrastructure.Persistence.deps.json
+C:\Programacion 3\MedicalSystem\MedicalSystem.Infrastructure.Persistence\bin\Debug\net8.0\MedicalSystem.Infrastructure.Persistence.dll
+C:\Programacion 3\MedicalSystem\MedicalSystem.Infrastructure.Persistence\bin\Debug\net8.0\MedicalSystem.Infrastructure.Persistence.pdb
+C:\Programacion 3\MedicalSystem\MedicalSystem.Infrastructure.Persistence\bin\Debug\net8.0\MedicalSystem.Application.dll
+C:\Programacion 3\MedicalSystem\MedicalSystem.Infrastructure.Persistence\bin\Debug\net8.0\MedicalSystem.Domain.dll
+C:\Programacion 3\MedicalSystem\MedicalSystem.Infrastructure.Persistence\bin\Debug\net8.0\MedicalSystem.Application.pdb
+C:\Programacion 3\MedicalSystem\MedicalSystem.Infrastructure.Persistence\bin\Debug\net8.0\MedicalSystem.Domain.pdb
+C:\Programacion 3\MedicalSystem\MedicalSystem.Infrastructure.Persistence\obj\Debug\net8.0\MedicalSystem.Infrastructure.Persistence.csproj.AssemblyReference.cache
+C:\Programacion 3\MedicalSystem\MedicalSystem.Infrastructure.Persistence\obj\Debug\net8.0\MedicalSystem.Infrastructure.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Programacion 3\MedicalSystem\MedicalSystem.Infrastructure.Persistence\obj\Debug\net8.0\MedicalSystem.Infrastructure.Persistence.AssemblyInfoInputs.cache
+C:\Programacion 3\MedicalSystem\MedicalSystem.Infrastructure.Persistence\obj\Debug\net8.0\MedicalSystem.Infrastructure.Persistence.AssemblyInfo.cs
+C:\Programacion 3\MedicalSystem\MedicalSystem.Infrastructure.Persistence\obj\Debug\net8.0\MedicalSystem.Infrastructure.Persistence.csproj.CoreCompileInputs.cache
+C:\Programacion 3\MedicalSystem\MedicalSystem.Infrastructure.Persistence\obj\Debug\net8.0\MedicalS.2F32BDA1.Up2Date
+C:\Programacion 3\MedicalSystem\MedicalSystem.Infrastructure.Persistence\obj\Debug\net8.0\MedicalSystem.Infrastructure.Persistence.dll
+C:\Programacion 3\MedicalSystem\MedicalSystem.Infrastructure.Persistence\obj\Debug\net8.0\refint\MedicalSystem.Infrastructure.Persistence.dll
+C:\Programacion 3\MedicalSystem\MedicalSystem.Infrastructure.Persistence\obj\Debug\net8.0\MedicalSystem.Infrastructure.Persistence.pdb
+C:\Programacion 3\MedicalSystem\MedicalSystem.Infrastructure.Persistence\obj\Debug\net8.0\ref\MedicalSystem.Infrastructure.Persistence.dll

@@ -1,0 +1,142 @@
+﻿@{
+    Layout = null;
+    ViewData["Title"] = "Bienvenido Asistente";
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f0f8ff;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #4CAF50;
+        }
+
+        .welcome-card {
+            background-color: #ffffff;
+            border: 2px solid #4CAF50;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            margin-top: 50px;
+            transition: transform 0.2s;
+        }
+
+            .welcome-card:hover {
+                transform: scale(1.05);
+            }
+
+        .icon {
+            font-size: 5em;
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        .navbar-custom {
+            background-color: #007bff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white !important;
+        }
+
+        .nav-link {
+            color: white !important;
+            font-weight: 500;
+        }
+
+            .nav-link:hover {
+                color: #d4d4d4 !important;
+            }
+
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            border-bottom: 2px solid #333;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header con barra de navegación mejorada -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/Asits/Index">Sistema Médico</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Asits/Index">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Patient/Index">Pacientes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Appointment/Index">Citas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="confirmLogout()">Cerrar Sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="welcome-card">
+            <i class="fas fa-user-check icon"></i>
+            <h1>¡Bienvenido Asistente!</h1>
+            <p>Estamos encantados de tenerte aquí. ¡Prepárate para hacer una gran diferencia!</p>
+        </div>
+    </div>
+
+    <!-- Modal para Confirmación de Cierre de Sesión -->
+    <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="logoutModalLabel">Confirmar Cierre de Sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ¿Estás seguro de que deseas cerrar sesión?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-danger" onclick="window.location.href='/Auth/Login'">Cerrar Sesión</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+
+    <script>
+        function confirmLogout() {
+            var logoutModal = new bootstrap.Modal(document.getElementById('logoutModal'));
+            logoutModal.show();
+        }
+    </script>
+</body>
+</html>
