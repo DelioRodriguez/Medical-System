@@ -1,4 +1,5 @@
-﻿using MedicalSystem.Application.Interfaces.Services.Generic;
+﻿using MedicalSystem.Application.Interfaces.Services.Appoint;
+using MedicalSystem.Application.Interfaces.Services.Generic;
 using MedicalSystem.Application.Interfaces.Services.Patients;
 using MedicalSystem.Application.Interfaces.Services.UserS;
 using MedicalSystem.Application.ViewModel.Patient;
@@ -14,10 +15,12 @@ namespace MedicalSystemApp.Controllers.Patients
         private readonly IPatientService _patientService;
         private readonly IService<Clinic> _clinicService;
         private readonly IUserService _userService;
+        private readonly IAppointmentService _appointmentService;
 
-        public PatientController(IPatientService patientService, IService<Clinic> clinicService, IUserService userService)
+        public PatientController(IPatientService patientService, IService<Clinic> clinicService, IUserService userService, IAppointmentService appointmentService)
         {
             _patientService = patientService;
+            _appointmentService = appointmentService;
             _clinicService = clinicService;
             _userService = userService;
         }
@@ -114,7 +117,7 @@ namespace MedicalSystemApp.Controllers.Patients
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-      
+
         public async Task<IActionResult> Edit(PatientViewModel model, IFormFile? photoFile)
         {
             if (!ModelState.IsValid)
@@ -139,7 +142,7 @@ namespace MedicalSystemApp.Controllers.Patients
                 else
                 {
                     var existingPatient = await _patientService.GetPatientAsync(model.Id);
-                    model.Photo = existingPatient.Photo; 
+                    model.Photo = existingPatient.Photo;
                 }
 
                 bool patientUpdated = await _patientService.UpdatePatientAsync(model);
@@ -160,10 +163,18 @@ namespace MedicalSystemApp.Controllers.Patients
             }
         }
 
+       
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int id)
         {
+            var hasAppointment = await _appointmentService.PatientHasAppointmentsAsync(id);
+            if (hasAppointment)
+            {
+                ModelState.AddModelError("", "El paciente no se puede eliminar porque tiene citas asociadas.");
+                return RedirectToAction("Index");
+            }
             var result = await _patientService.DeletePatientAsync(id);
             if(!result) return NotFound();
 

@@ -1,4 +1,5 @@
-﻿using MedicalSystem.Application.Interfaces.Services.DoctorSe;
+﻿using MedicalSystem.Application.Interfaces.Services.Appoint;
+using MedicalSystem.Application.Interfaces.Services.DoctorSe;
 using MedicalSystem.Application.Interfaces.Services.Generic;
 using MedicalSystem.Application.Interfaces.Services.UserS;
 using MedicalSystem.Application.ViewModel.Doctor;
@@ -14,10 +15,12 @@ namespace MedicalSystemApp.Controllers.Docto
         private readonly IDoctorService _doctorService;
         private readonly IService<Clinic> _clinicService;
         private readonly IUserService _userService;
+        private readonly IAppointmentService _appointmentService;
 
-        public DoctorController(IDoctorService doctorService, IService<Clinic> clinicService, IUserService userService)
+        public DoctorController(IDoctorService doctorService, IService<Clinic> clinicService, IUserService userService, IAppointmentService appointmentService)
         {
             _doctorService = doctorService;
+            _appointmentService = appointmentService;
             _clinicService = clinicService;
             _userService = userService;
         }
@@ -184,13 +187,25 @@ namespace MedicalSystemApp.Controllers.Docto
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int id)
         {
+           
+            var hasAppointments = await _appointmentService.DoctorHasAppointmentsAsync(id);
+
+            if (hasAppointments)
+            {
+                
+                ModelState.AddModelError("", "El doctor no se puede eliminar porque tiene citas asociadas.");
+                return RedirectToAction("Index"); 
+            }
             var result = await _doctorService.DeleteDoctorAsync(id);
+
             if (!result)
             {
                 return NotFound();
             }
+
             return RedirectToAction("Index");
         }
+
 
 
         private async Task<IEnumerable<SelectListItem>> GetClinicsAsync()

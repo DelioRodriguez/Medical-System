@@ -5,6 +5,7 @@ using MedicalSystem.Domain.Enums;
 using MedicalSystem.Infrastructure.Persistence.Context;
 using MedicalSystem.Infrastructure.Persistence.Repositories.Generic;
 using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 
 namespace MedicalSystem.Infrastructure.Persistence.Repositories.Lab
 {
@@ -64,6 +65,11 @@ namespace MedicalSystem.Infrastructure.Persistence.Repositories.Lab
                 .Include(r => r.Patient)
                 .Include(r => r.LabTest)
                 .ToListAsync();
+        }
+
+        public async Task<bool> AnyAsync(Expression<Func<LabResult, bool>> predicate)
+        {
+            return await _context.Set<LabResult>().AnyAsync(predicate);
         }
     }
 }

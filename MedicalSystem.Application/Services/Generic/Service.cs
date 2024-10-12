@@ -1,7 +1,6 @@
 ﻿using MedicalSystem.Application.Interfaces.Repository.Generic;
 using MedicalSystem.Application.Interfaces.Services.Generic;
 
-
 namespace MedicalSystem.Application.Services.Generic
 {
     public class Service<T> : IService<T> where T : class

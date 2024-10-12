@@ -1,4 +1,5 @@
-﻿using MedicalSystem.Application.Interfaces.Services.Test;
+﻿using MedicalSystem.Application.Interfaces.Services.Lab;
+using MedicalSystem.Application.Interfaces.Services.Test;
 using MedicalSystem.Application.Interfaces.Services.UserS;
 using MedicalSystem.Application.ViewModel.LabTestS;
 using Microsoft.AspNetCore.Mvc;
@@ -10,10 +11,12 @@ namespace MedicalSystemApp.Controllers.Test
     {
         private readonly ILabTestService _labTestService;
         private readonly IUserService _userService;
+        private readonly ILabResultService _labResultService;
 
-        public LabTestController(ILabTestService labTestService, IUserService userService)
+        public LabTestController(ILabTestService labTestService, IUserService userService, ILabResultService labResultService)
         {
             _labTestService = labTestService;
+            _labResultService = labResultService;
             _userService = userService;
         }
 
@@ -118,6 +121,13 @@ namespace MedicalSystemApp.Controllers.Test
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int id)
         {
+            var labResultsCreate = await _labResultService.LabtestHasResults(id);
+            if (labResultsCreate)
+            {
+                ModelState.AddModelError("", "El lab test no se puede eliminar porque tiene resultados asociados.");
+                return RedirectToAction("Index");
+            }
+
             var result = await _labTestService.DeleteLabTestAsync(id);
             if (!result) return NotFound();
 

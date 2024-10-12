@@ -10,7 +10,7 @@ namespace MedicalSystem.Application.Interfaces.Services.Patients
         Task<bool> UpdatePatientAsync(PatientViewModel viewModel);
         Task<bool> DeletePatientAsync(int id);
         Task<PatientViewModel> GetPatientAsync(int id);
-       
+
         Task<IEnumerable<PatientViewModel>> GetPatientByClinicAsync(int clinicId);
         Task<string> GetPatientNameByIdAsync(int patientId);
         Task<int> GetClinicByPatientIdAsync(int patientId);

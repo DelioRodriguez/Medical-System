@@ -32,6 +32,11 @@ namespace MedicalSystem.Application.Services.AppointmentSer
                 PatientName = a.Patient.FirstName
             });
         }
+        public async Task<bool> DoctorHasAppointmentsAsync(int doctorId)
+        {
+            return await _appointmentRepository.AnyAsync(a => a.DoctorId == doctorId);
+        }
+
 
         public async Task<AppointmentViewModel> CreateAppointmentAsync(AppointmentViewModel model)
         {
@@ -62,6 +67,11 @@ namespace MedicalSystem.Application.Services.AppointmentSer
         public async Task DeleteAppointmentAsync(int id)
         {
             await _appointmentRepository.DeleteAppointmentAsync(id);
+        }
+
+        public async Task<bool> PatientHasAppointmentsAsync(int patientId)
+        {
+            return await _appointmentRepository.AnyAsync(a => a.PatientId == patientId);
         }
     }
 }

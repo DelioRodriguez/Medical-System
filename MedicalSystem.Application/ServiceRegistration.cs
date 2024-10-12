@@ -1,6 +1,4 @@
-﻿
-
-using MedicalSystem.Application.Interfaces.Services.Appoint;
+﻿using MedicalSystem.Application.Interfaces.Services.Appoint;
 using MedicalSystem.Application.Interfaces.Services.Auth;
 using MedicalSystem.Application.Interfaces.Services.DoctorSe;
 using MedicalSystem.Application.Interfaces.Services.Lab;
@@ -29,6 +27,9 @@ namespace MedicalSystem.Application
             services.AddScoped<IAppointmentService, AppointmentService>();
             services.AddScoped<ILabTestService, LabTestService>();
             services.AddScoped<ILabResultService, LabResulService>();
+            services.AddScoped<IAuthService, AuthService>();
+            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IDoctorService, DoctorServices>();
         }
     }
 }

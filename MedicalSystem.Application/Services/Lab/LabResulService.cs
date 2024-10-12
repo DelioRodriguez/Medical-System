@@ -128,5 +128,10 @@ namespace MedicalSystem.Application.Services.Lab
                 await _resultRepository.updateAsync(result);
             }
         }
+
+        public async Task<bool> LabtestHasResults(int labTest)
+        {
+            return await _resultRepository.AnyAsync(r => r.LabTestId == labTest);
+        }
     }
 }

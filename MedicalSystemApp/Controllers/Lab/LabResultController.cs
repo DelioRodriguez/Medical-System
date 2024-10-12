@@ -1,5 +1,4 @@
-﻿
-using MedicalSystem.Application.Interfaces.Services.Lab;
+﻿using MedicalSystem.Application.Interfaces.Services.Lab;
 using MedicalSystem.Application.Interfaces.Services.UserS;
 using MedicalSystem.Application.ViewModel.Lab;
 
@@ -83,22 +82,20 @@ namespace MedicalSystemApp.Controllers.Lab
         }
 
         [HttpGet]
-        public async Task<IActionResult> Search (string patientIDCard)
+        public async Task<IActionResult> Search(string patientCardId)
         {
             try
             {
                 var clinicIdClaim = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
-
-                if(clinicIdClaim is null) throw new InvalidOperationException("No se encontró el Clinic Id en los Claims");
-
+                if (clinicIdClaim is null)
+                    throw new InvalidOperationException("No se encontró el Clinic Id en los Claims");
 
                 int clinicId = int.Parse(clinicIdClaim);
                 int clinicIdRight = await _userService.GetClinicIdByUserIdAsync(clinicId);
 
-                var result = await _resultService.GetPendingResultsByPatientCardIdAsync(patientIDCard, clinicIdRight);
+                var result = await _resultService.GetPendingResultsByPatientCardIdAsync(patientCardId, clinicIdRight);
                 return View("Index", result);
-
             }
             catch (Exception ex)
             {
@@ -106,5 +103,6 @@ namespace MedicalSystemApp.Controllers.Lab
                 return View("Index", new List<ResultLaboratoryListViewModel>());
             }
         }
+
     }
 }

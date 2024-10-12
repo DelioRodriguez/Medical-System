@@ -14,10 +14,11 @@ namespace MedicalSystem.Application.Interfaces.Services.Lab
         Task<List<ResultLaboratoryListViewModel>> GetPendingResultsByPatientCardIdAsync(string patientCardId, int officeId);
         Task<LabResult> GetResultByIdAsync(int resultId);
         Task<int> GetClinicByResultIdAsync(int id);
+        Task<bool> LabtestHasResults(int labTest);
         Task<List<LabResult>> GetResultsByAppointmentIdAsync(int appointmentId);
         Task ReportResultAsync(ReportResultViewModel reportViewModel);
         Task CreateLabResultAsync(CreateResultViewModel model);
-        
+
         Task<List<LabResult>> GetAllConfirmedResultsByAppointmentIdAsync(int officeId, int appointmentId);
     }
 }

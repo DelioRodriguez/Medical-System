@@ -12,7 +12,7 @@ namespace MedicalSystem.Application.Interfaces.Services.DoctorSe
         Task<DoctorViewModel> GetDoctorAsync(int id);
         Task<IEnumerable<DoctorViewModel>> GetAllDoctorsAsync();
         Task<IEnumerable<DoctorViewModel>> GetDoctorByClinicAsync(int id);
-        Task<int> GetClinicByDoctorIdAsync (int id);
+        Task<int> GetClinicByDoctorIdAsync(int id);
         Task<string> GetDoctorNameByIdAsync(int doctorId);
     }
 }

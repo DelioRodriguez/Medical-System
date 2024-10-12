@@ -52,6 +52,11 @@
     </style>
 </head>
 <body>
+    @{
+        
+        var fechaActual = Model.DateOfBirth == DateTime.MinValue ? DateTime.Now.ToString("yyyy-MM-dd") : Model.DateOfBirth.ToString("yyyy-MM-dd");
+        var maxFecha = DateTime.Now.ToString("yyyy-MM-dd");
+    }
     <nav class="navbar navbar-expand-lg navbar-custom">
         <div class="container-fluid">
             <a class="navbar-brand" href="/Asits/Index">Sistema Médico</a>
@@ -124,7 +129,7 @@
 
                 <div class="mb-3">
                     <label asp-for="DateOfBirth" class="form-label"></label>
-                    <input asp-for="DateOfBirth" class="form-control" type="date" />
+                    <input asp-for="DateOfBirth" class="form-control" type="date" value="@fechaActual" max="@maxFecha" />
                     <span asp-validation-for="DateOfBirth" class="text-danger"></span>
                 </div>
 

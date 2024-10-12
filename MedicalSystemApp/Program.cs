@@ -1,41 +1,12 @@
-using MedicalSystem.Application.Services.AuthService;
+
 using MedicalSystem.Infrastructure.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
-using MedicalSystem.Application.Services.Generic;
-using MedicalSystem.Infrastructure.Persistence.Repositories.Generic;
-using MedicalSystem.Application.Interfaces.Repository.Auth;
-using MedicalSystem.Application.Interfaces.Services.Auth;
-using MedicalSystem.Application.Interfaces.Services.Generic;
-using MedicalSystem.Application.Interfaces.Repository.Generic;
-using MedicalSystem.Domain.Entities;
-using MedicalSystem.Application.Interfaces.Services.UserS;
-using MedicalSystem.Application.Interfaces.Repository.UserRepository;
-using MedicalSystem.Infrastructure.Persistence.Repositories.UserRepo;
-using Microsoft.AspNetCore.Authentication.Cookies;
-using MedicalSystem.Application.Interfaces.Services.DoctorSe;
-using MedicalSystem.Application.Services.DoctorSer;
-using MedicalSystem.Application.Interfaces.Repository.DoctorRe;
-using MedicalSystem.Infrastructure.Persistence.Repositories.DoctorRepo;
-using MedicalSystem.Application.Services.UserSer;
-using MedicalSystem.Application.Interfaces.Services.Patients;
-using MedicalSystem.Application.Services.PatientSe;
-using MedicalSystem.Application.Interfaces.Repository.Patients;
-using MedicalSystem.Infrastructure.Persistence.Repositories.PatientsRe;
-using MedicalSystem.Application.Interfaces.Repository.AppointmentS;
-using MedicalSystem.Application.Interfaces.Services.Appoint;
 
-using MedicalSystem.Infrastructure.Persistence.Repositories.AppointmentRep;
-using MedicalSystem.Application.Interfaces.Repository.Test;
-using MedicalSystem.Application.Interfaces.Services.Test;
-using MedicalSystem.Application.Services.Test;
-using MedicalSystem.Infrastructure.Persistence.Repositories.Test;
-using MedicalSystem.Application.Interfaces.Repository.Lab;
-using MedicalSystem.Application.Interfaces.Services.Lab;
-using MedicalSystem.Application.Services.Lab;
-using MedicalSystem.Infrastructure.Persistence.Repositories.Lab;
-using MedicalSystem.Application.Services.AppointmentSer;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using MedicalSystem.Application;
 using MedicalSystem.Infrastructure.Persistence;
+using MedicalSystem.Application.Services.Generic;
+using MedicalSystem.Application.Interfaces.Services.Generic;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -47,6 +18,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+builder.Services.AddScoped(typeof(IService<>), typeof(Service<>));
 ServiceRegistration.RegisterServices(builder.Services);
 RepositoryRegistration.RegisterRepositories(builder.Services);
 

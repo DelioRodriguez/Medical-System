@@ -159,14 +159,24 @@ namespace MedicalSystemApp.Controllers.MantUser
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int id)
         {
+            
+            var loggedInUserId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+
+            if (id == loggedInUserId)
+            {
+                ModelState.AddModelError(string.Empty, "No puedes eliminar tu propia cuenta.");
+                return RedirectToAction("Index");
+            }
+
+         
             var result = await _userService.DeleteUserAsync(id);
             if (!result)
             {
                 return NotFound();
             }
+
             return RedirectToAction("Index");
         }
-
 
         private async Task<IEnumerable<SelectListItem>> GetClinicsAsync()
         {

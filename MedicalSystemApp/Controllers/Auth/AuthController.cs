@@ -1,12 +1,12 @@
-﻿using MedicalSystem.Application.Interfaces.Services.Auth;
-using MedicalSystem.Application.Interfaces.Services.Generic;
-using MedicalSystem.Application.ViewModel.User;
+﻿using MedicalSystem.Application.ViewModel.User;
 using MedicalSystem.Domain.Entities;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Security.Claims;
+using MedicalSystem.Application.Interfaces.Services.Auth;
+using MedicalSystem.Application.Interfaces.Services.Generic;
 using MedicalSystem.Application.Interfaces.Services.UserS;
 
 namespace MedicalSystemApp.Controllers.Auth

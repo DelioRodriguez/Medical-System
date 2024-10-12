@@ -4,6 +4,7 @@ using MedicalSystem.Domain.Entities;
 using MedicalSystem.Infrastructure.Persistence.Context;
 using MedicalSystem.Infrastructure.Persistence.Repositories.Generic;
 using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 
 namespace MedicalSystem.Infrastructure.Persistence.Repositories.AppointmentRep
 {
@@ -20,6 +21,10 @@ namespace MedicalSystem.Infrastructure.Persistence.Repositories.AppointmentRep
                 .Include(a => a.Doctor)
                 .Where(a => a.ClinicId == clinicId)
                 .ToListAsync();
+        }
+        public async Task<bool> AnyAsync(Expression<Func<Appointment, bool>> predicate)
+        {
+            return await _context.Set<Appointment>().AnyAsync(predicate);
         }
 
         public async Task<Appointment> CreateAppointmentAsync(Appointment appointment)

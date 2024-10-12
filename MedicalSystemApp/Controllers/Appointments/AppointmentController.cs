@@ -1,16 +1,16 @@
-﻿using MedicalSystem.Application.Interfaces.Services.Appoint;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;
-using MedicalSystem.Application.Interfaces.Services.DoctorSe;
-using MedicalSystem.Application.Interfaces.Services.Patients;
 using MedicalSystem.Application.ViewModel.Ammoin;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using MedicalSystem.Application.Interfaces.Services.UserS;
-using MedicalSystem.Application.Interfaces.Services.Test;
 using MedicalSystem.Application.ViewModel.Lab;
 using MedicalSystem.Domain.Enums;
-using MedicalSystem.Application.Interfaces.Services.Lab;
 using MedicalSystem.Application.ViewModel.Extras;
+using MedicalSystem.Application.Interfaces.Services.Appoint;
+using MedicalSystem.Application.Interfaces.Services.DoctorSe;
+using MedicalSystem.Application.Interfaces.Services.Lab;
+using MedicalSystem.Application.Interfaces.Services.Patients;
+using MedicalSystem.Application.Interfaces.Services.Test;
+using MedicalSystem.Application.Interfaces.Services.UserS;
 
 namespace MedicalSystemApp.Controllers
 {
